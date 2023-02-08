@@ -108,6 +108,11 @@ html{
     opacity: 0;
 }
 
+.login-form-container .active{
+    top: 0;
+    opacity: 5;
+}
+
 .login-form-container form{
     padding: 2rem;
     margin: 2rem;
@@ -149,6 +154,8 @@ html{
     border: var(--border);
     border-radius: .5rem;
 }
+
+
 .login-form-container form p{
     padding: 1rem 0;
     font-size: 1.5rem;

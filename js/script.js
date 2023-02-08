@@ -43,3 +43,7 @@ window.onload = () => {
 
     
 }
+
+document.querySelector('#login-btn').onclick = () => {
+    document.querySelector('.login-form-container').classList.toggle('active');
+}
