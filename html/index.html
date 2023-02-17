@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="/namu-limited/css/style.css">
+    <link type="text/css" rel="stylesheet" href="/namu-limited/css/style.css">
+    <title>Namu Cars Limited</title>
+    
 
 </head>
 <body>
@@ -41,13 +43,14 @@
 <div class="login-form-container">
 
     <span id="close-login-form" class="fas fa-times"></span>
-
+    
     <form action="">
         <h3>user login</h3>
-        <input type="email" placeholder="email" class="box">
-        <input type="password" placeholder="password" class="box">
+        <input type="email" placeholder="email" class="box" id="email">
+        <input type="password" placeholder="password" class="box" id="password">
         <p> forget your password <a href="#">click here</a> </p>
-        <input type="submit" value="login" class="btn">
+     <button type ="submit" class="btn" id="submit">login</button> 
+         <!-- <input type="submit" value="login" class="btn" id="submit">  -->
         <p>or login with</p>
         <div class="buttons">
             <a href="#" class="btn"> google </a>
@@ -536,10 +539,10 @@
 
     <div class="row">
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.79255189241!2d36.77437301430524!3d-1.2992569360058241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f111c5b5d7389%3A0x1fedd4f82d778548!2sNamu%20Cars%20Ltd.%20-%20Kilimani!5e0!3m2!1sen!2ske!4v1675841802315!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.79255189241!2d36.77437301430524!3d-1.2992569360058241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f111c5b5d7389%3A0x1fedd4f82d778548!2sNamu%20Cars%20Ltd.%20-%20Kilimani!5e0!3m2!1sen!2ske!4v1675841802315!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="myFrame"></iframe>
         <form action="">
             <h3>get in touch</h3>
-            <input type="text" placeholder="your name" class="box">
+            <input type="text" placeholder="your name" class="box" >
             <input type="email" placeholder="your email" class="box">
             <input type="tel" placeholder="subject" class="box">
             <textarea placeholder="your message" class="box" cols="30" rows="10"></textarea>
@@ -594,17 +597,22 @@
 </section>
 
 
+<!-- firebase cdn -->
+
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
 
 
 
+<!-- /firebase cnd -->
+<script type="text/javascript" src="/namu-limited/js/firebase.js"></script>
+ 
+ 
+<script type="text/javascript" src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 
-
-
-
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-<script src="/namu-limited/js/script.js"></script>
+<script type="text/javascript" src="/namu-limited/js/script.js"></script>
 
 </body>
 </html>
