@@ -1,4 +1,3 @@
-
 const firebaseApp = firebase.initializeApp({ 
     apiKey: "AIzaSyA2cpiKOc-QTntZhixngoDJPQNeBBr0L20",
     authDomain: "trial-66a86.firebaseapp.com",
@@ -14,30 +13,20 @@ const firebaseApp = firebase.initializeApp({
  const db = firebaseApp.firestore();
  const auth = firebaseApp.auth();
 
-
-
-
-
-
-
-
-document.getElementById('submit').addEventListener('click', function(event){
+ document.getElementById("signup").addEventListener('click', function(event){
     event.preventDefault();
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const email = document.getElementById('1email').value;
+    const password = document.getElementById('1password').value;
     console.log(email, password);
-  
-   auth.signInWithEmailAndPassword(email, password)
-   .then((res) => {
+    auth.createUserWithEmailAndPassword(email, password)
+    .then((res) => {
     console.log(res.user);
    })
    .catch((err) => {
     console.log(err.code);
     alert(err.message);
    }) 
-    
-    
+
 });
 
-   
