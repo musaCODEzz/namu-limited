@@ -12,6 +12,7 @@ const firebaseApp = firebase.initializeApp({
 
  const db = firebaseApp.firestore();
  const auth = firebaseApp.auth();
+ const today = new Date();
 
  document.getElementById("signup").addEventListener('click', function(event){
     event.preventDefault();
@@ -20,8 +21,14 @@ const firebaseApp = firebase.initializeApp({
     const password = document.getElementById('1password').value;
     console.log(email, password);
     auth.createUserWithEmailAndPassword(email, password)
-    .then((res) => {
-    console.log(res.user);
+    .then((userCredentials) => {
+    console.log(userCredentials.user);
+      db.collection('users').doc(userCredentials.user.uid).set({
+         email: email,
+         password: password,
+         date: today
+      })
+
    })
    .catch((err) => {
     console.log(err.code);

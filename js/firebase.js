@@ -29,8 +29,12 @@ document.getElementById('submit').addEventListener('click', function(event){
     console.log(email, password);
   
    auth.signInWithEmailAndPassword(email, password)
-   .then((res) => {
-    console.log(res.user);
+   .then((userCredentials) => {
+    console.log(userCredentials.user);
+    sessionStorage.setItem('user', JSON.stringify(userCredentials.user));
+    window.location.href = "/namu-limited/html/welcome.html";
+
+
    })
    .catch((err) => {
     console.log(err.code);
