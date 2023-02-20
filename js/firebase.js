@@ -2,6 +2,7 @@
 const firebaseApp = firebase.initializeApp({ 
     apiKey: "AIzaSyA2cpiKOc-QTntZhixngoDJPQNeBBr0L20",
     authDomain: "trial-66a86.firebaseapp.com",
+    databaseURL: "https://trial-66a86-default-rtdb.firebaseio.com",
     projectId: "trial-66a86",
     storageBucket: "trial-66a86.appspot.com",
     messagingSenderId: "656510144104",
@@ -13,9 +14,7 @@ const firebaseApp = firebase.initializeApp({
 
  const db = firebaseApp.firestore();
  const auth = firebaseApp.auth();
-
-
-
+const realtimedb = firebaseApp.database();
 
 
 
@@ -44,4 +43,32 @@ document.getElementById('submit').addEventListener('click', function(event){
     
 });
 
-   
+
+// Contact Form Submit
+
+const contactFormDb = realtimedb.ref('contactForm');
+
+
+
+
+document.getElementById('contactForm').addEventListener('submit', function(event){
+    event.preventDefault();
+
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('emailid').value;
+    var subject = document.getElementById('subject').value;
+    var msgContent = document.getElementById('msgContent').value;
+    console.log('====================================');
+    console.log(name, email, subject, msgContent);
+    console.log('====================================');
+
+    
+     const saveContactForm = contactFormDb.push();
+     saveContactForm.set({
+         name: name,
+         email: email,
+         subject: subject,
+         msgContent: msgContent
+     })
+     document.getElementById('contactForm').reset();
+});
