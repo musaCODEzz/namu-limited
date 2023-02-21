@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Financing</title>
+</head>
+<body>
+    <h1>Vehicle Financing</h1>
+    <p>We have parterned with a number of local banks including NCBA, ABSA and STANBIC to make it easy for you to get your next car. With up to 80% financing, this is a deal you simply don't want to miss!</p>
+    <p>See below the requirements for the different categories:</p>
+    <p>
+        <strong>Salaried Individuals</strong>
+    </p>
+    <ul>
+        <li>Copy of ID & PIN</li>
+        <li>Latest 3 months payslips</li>
+        <li>Letter of employment</li>
+        <li>Copy of logbook for the vehicle beig financed (should be not more than 8 years)</li>
+        <li>Valuation report form will be required after approval</li>
+        <li>Proforma invoice from dealer</li>
+    </ul>
+    <p>
+        <strong>Limited Company</strong>
+    </p>
+    <ul>
+        <li>Copy of ID's for directors</li>
+        <li>Copy of Atricles/ Memos of Association/ Certificate of Incorporation</li>
+        <li>Copy of Permit/ Trade license and contracts</li>
+        <li>Board resolution to borrow</li>
+        <li>Latest Annual Returns and filing receipts plus CR 12</li>
+        <li>No audited accounts required for facility amounts up to Ksh. 15m</li>
+        <li>Copy of logbook for the vehicle being financed (should be no more than 8 years old)</li>
+        <li>Valuation report form will be required after approval.</li>
+        <li>Pro-forma invoice from the dealer.</li>
+    </ul>
+    
+    <p>Use the financing calculator on the right to estimate monthly payments on your next new or used car loan. Simply enter the loan amount, interest rate, term and down payment&nbsp; to calculate your monthly auto loan payments.</p>
+    <p>Financial Calculator</p>
+    <p>Use the calculator below to estimate monthly payments on your next new or used car loan. Simply enter the loan amount, interest rate, term and down payment to calculate your monthly auto loan payments.</p>
+    <label for="loanAmount">Loan Amount</label>
+    <input type="number" id="loanAmount" placeholder="Loan Amount">
+    <label for="interestRate">Interest Rate</label>
+    <input type="number" id="interestRate" placeholder="Interest Rate">
+    <label for="loanTerm">Loan Term in Months</label>
+    <input type="number" id="loanTerm" placeholder="Loan Term in months">
+    <label for="downPayment">Down Payment</label>
+    <input type="number" id="downPayment" placeholder="Down Payment">
+    <button onclick="calculate()">Calculate</button>
+    <p id="monthlyPayment"></p>
+    <p id="totalPayment"></p>
+    <p id="totalInterest"></p>
+    <script>
+        function calculate() {
+            var loanAmount = document.getElementById("loanAmount").value;
+            var interestRate = document.getElementById("interestRate").value;
+            var loanTerm = document.getElementById("loanTerm").value;
+            var downPayment = document.getElementById("downPayment").value;
+
+            // Calculating monthly payment
+            var monthInterest = interestRate / 100 / 12;
+            var monthlyPayment = (loanAmount - downPayment) * monthInterest / (1 - (Math.pow(1 / (1 + monthInterest), loanTerm)));
+            //rounding to 2 decimal places
+            monthlyPayment = Math.round(monthlyPayment * 100) / 100;
+
+
+            //var monthlyPayment = (loanAmount - downPayment) * (interestRate / 100) / loanTerm;
+            document.getElementById("monthlyPayment").innerHTML = "Monthly Payment: " + monthlyPayment;
+
+            // Calculating total payment
+            var totalPayment = monthlyPayment * loanTerm;
+            document.getElementById("totalPayment").innerHTML = "Total Payment: " + totalPayment;
+
+            // Calculating total interest
+            var totalInterest = totalPayment - (loanAmount - downPayment);
+            totalInterest = Math.round(totalInterest * 100) / 100;
+            document.getElementById("totalInterest").innerHTML = "Total Interest: " + totalInterest;
+            //rounding to 2 decimal places
+            
+
+
+        }
+    </script>
+
+    
+</body>
+</html>
