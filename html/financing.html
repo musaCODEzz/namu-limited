@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/namu-limited/css/financing.css">
+     <!-- font awesome cdn link  -->
+     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <title>Vehicle Financing</title>
 </head>
 <body>
@@ -37,16 +41,16 @@
     </ul>
     
     <p>Use the financing calculator on the right to estimate monthly payments on your next new or used car loan. Simply enter the loan amount, interest rate, term and down payment&nbsp; to calculate your monthly auto loan payments.</p>
-    <p>Financial Calculator</p>
+    <p><strong>Financial Calculator</strong></p>
     <p>Use the calculator below to estimate monthly payments on your next new or used car loan. Simply enter the loan amount, interest rate, term and down payment to calculate your monthly auto loan payments.</p>
     <label for="loanAmount">Loan Amount</label>
-    <input type="number" id="loanAmount" placeholder="Loan Amount">
+    <input type="number" id="loanAmount" placeholder="Loan Amount"><br />
     <label for="interestRate">Interest Rate</label>
-    <input type="number" id="interestRate" placeholder="Interest Rate">
+    <input type="number" id="interestRate" placeholder="Interest Rate"><br />
     <label for="loanTerm">Loan Term in Months</label>
-    <input type="number" id="loanTerm" placeholder="Loan Term in months">
+    <input type="number" id="loanTerm" placeholder="Loan Term in months"><br />
     <label for="downPayment">Down Payment</label>
-    <input type="number" id="downPayment" placeholder="Down Payment">
+    <input type="number" id="downPayment" placeholder="Down Payment"><br />
     <button onclick="calculate()">Calculate</button>
     <p id="monthlyPayment"></p>
     <p id="totalPayment"></p>
