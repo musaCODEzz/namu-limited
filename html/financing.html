@@ -11,50 +11,58 @@
     <title>Vehicle Financing</title>
 </head>
 <body>
-    <h1>Vehicle Financing</h1>
-    <p>We have parterned with a number of local banks including NCBA, ABSA and STANBIC to make it easy for you to get your next car. With up to 80% financing, this is a deal you simply don't want to miss!</p>
-    <p>See below the requirements for the different categories:</p>
-    <p>
-        <strong>Salaried Individuals</strong>
-    </p>
-    <ul>
-        <li>Copy of ID & PIN</li>
-        <li>Latest 3 months payslips</li>
-        <li>Letter of employment</li>
-        <li>Copy of logbook for the vehicle beig financed (should be not more than 8 years)</li>
-        <li>Valuation report form will be required after approval</li>
-        <li>Proforma invoice from dealer</li>
-    </ul>
-    <p>
-        <strong>Limited Company</strong>
-    </p>
-    <ul>
-        <li>Copy of ID's for directors</li>
-        <li>Copy of Atricles/ Memos of Association/ Certificate of Incorporation</li>
-        <li>Copy of Permit/ Trade license and contracts</li>
-        <li>Board resolution to borrow</li>
-        <li>Latest Annual Returns and filing receipts plus CR 12</li>
-        <li>No audited accounts required for facility amounts up to Ksh. 15m</li>
-        <li>Copy of logbook for the vehicle being financed (should be no more than 8 years old)</li>
-        <li>Valuation report form will be required after approval.</li>
-        <li>Pro-forma invoice from the dealer.</li>
-    </ul>
-    
-    <p>Use the financing calculator on the right to estimate monthly payments on your next new or used car loan. Simply enter the loan amount, interest rate, term and down payment&nbsp; to calculate your monthly auto loan payments.</p>
-    <p><strong>Financial Calculator</strong></p>
-    <p>Use the calculator below to estimate monthly payments on your next new or used car loan. Simply enter the loan amount, interest rate, term and down payment to calculate your monthly auto loan payments.</p>
-    <label for="loanAmount">Loan Amount</label>
-    <input type="number" id="loanAmount" placeholder="Loan Amount"><br />
-    <label for="interestRate">Interest Rate</label>
-    <input type="number" id="interestRate" placeholder="Interest Rate"><br />
-    <label for="loanTerm">Loan Term in Months</label>
-    <input type="number" id="loanTerm" placeholder="Loan Term in months"><br />
-    <label for="downPayment">Down Payment</label>
-    <input type="number" id="downPayment" placeholder="Down Payment"><br />
-    <button onclick="calculate()">Calculate</button>
-    <p id="monthlyPayment"></p>
-    <p id="totalPayment"></p>
-    <p id="totalInterest"></p>
+    <div class="financeCont">
+            <h1>Vehicle Financing</h1>
+        <p>We have parterned with a number of local banks including NCBA, ABSA and STANBIC to make it easy for you to get your next car. With up to 80% financing, this is a deal you simply don't want to miss!</p>
+        <p>See below the requirements for the different categories:</p>
+        <p>
+            <strong>Salaried Individuals</strong>
+        </p>
+        <ul>
+            <li>Copy of ID & PIN</li>
+            <li>Latest 3 months payslips</li>
+            <li>Letter of employment</li>
+            <li>Copy of logbook for the vehicle beig financed (should be not more than 8 years)</li>
+            <li>Valuation report form will be required after approval</li>
+            <li>Proforma invoice from dealer</li>
+        </ul>
+        <p>
+            <strong>Limited Company</strong>
+        </p>
+        <ul>
+            <li>Copy of ID's for directors</li>
+            <li>Copy of Atricles/ Memos of Association/ Certificate of Incorporation</li>
+            <li>Copy of Permit/ Trade license and contracts</li>
+            <li>Board resolution to borrow</li>
+            <li>Latest Annual Returns and filing receipts plus CR 12</li>
+            <li>No audited accounts required for facility amounts up to Ksh. 15m</li>
+            <li>Copy of logbook for the vehicle being financed (should be no more than 8 years old)</li>
+            <li>Valuation report form will be required after approval.</li>
+            <li>Pro-forma invoice from the dealer.</li>
+        </ul>
+        
+        <p>Use the financing calculator on the right to estimate monthly payments on your next new or used car loan. Simply enter the loan amount, interest rate, term and down payment&nbsp; to calculate your monthly auto loan payments.</p>
+    </div>
+    <!--  -->
+    <div class="calcContainer">
+        <div class="calc">
+            <h3>Financial Calculator</h3>
+            <p>Use the calculator below to estimate monthly payments on your next new or used car loan.</p>
+            <label for="loanAmount">Loan Amount</label>
+            <input type="number" id="loanAmount" placeholder="Loan Amount" class="calcBox" ><br />
+            <label for="interestRate">Interest Rate</label>
+            <input type="number" id="interestRate" placeholder="Interest Rate" class="calcBox" value="10"><br />
+            <label for="loanTerm">Loan Term in Months</label>
+            <input type="number" id="loanTerm" placeholder="Loan Term in months" class="calcBox" value="12"><br />
+            <label for="downPayment">Down Payment</label>
+            <input type="number" id="downPayment" placeholder="Down Payment" class="calcBox"><br />
+            <button onclick="calculate()">Calculate</button>
+            <p id="monthlyPayment"></p>
+            <p id="totalPayment"></p>
+            <p id="totalInterest"></p>
+        </div>
+        
+    </div>
     <script>
         function calculate() {
             var loanAmount = document.getElementById("loanAmount").value;
@@ -71,10 +79,16 @@
 
             //var monthlyPayment = (loanAmount - downPayment) * (interestRate / 100) / loanTerm;
             document.getElementById("monthlyPayment").innerHTML = "Monthly Payment: " + monthlyPayment;
+            // add comas to the monthly payment
+             //var monthlyPayment = monthlyPayment.toLocaleString('en-US', {style: 'currency', currency: 'KES'});
+            document.getElementById("monthlyPayment").innerHTML = "Monthly Payment: " + monthlyPayment;
 
             // Calculating total payment
             var totalPayment = monthlyPayment * loanTerm;
+            //add commas to the total payment
+            
             document.getElementById("totalPayment").innerHTML = "Total Payment: " + totalPayment;
+            
 
             // Calculating total interest
             var totalInterest = totalPayment - (loanAmount - downPayment);
