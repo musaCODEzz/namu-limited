@@ -101,18 +101,12 @@ input::-webkit-inner-spin-button {
 
 @media (max-width:450px){
    
-    .Fcontainer{
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    }
     .calcContainer{
-        margin-left: 0;
+       width: 60%;
+       font-size: 90%;
     }
     
-    .Fheader{
-        padding-left: 0;
+    .calcBox{
+        width: 100%;
     }
-    .Fcontainer{
-        padding-left: 0;
-    }
-    
 }
