@@ -1,28 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
-
-:root{
-    --yellow:#f9d806;
-    --light-yellow:#ffee80;
-    --black:#130f40;
-    --light-color:#666;
-    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-    --border:.1rem solid rgba(0,0,0,.1);
-}
-*{
-    font-family: 'Poppins', sans-serif;
-    margin:0; padding:0;
-    box-sizing: border-box;
-    outline: none; border:none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
-}
-
 html{
-    /* font-size: 80%; */
-    overflow-x: hidden;
-    scroll-padding-top: 7rem;
+    font-size: 80% !important;
+    box-sizing: border-box;
     scroll-behavior: smooth;
+}
+.Fheader{
+    
+    padding-left: 3rem;
+    
+    
+    background: #fff;
+}
+h1{
+    color:var(--black);
+    font-size: 2.5vw;
+    text-transform: uppercase;
+}
+
+
+
+.Fcontainer{
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+   padding-left: 4rem;
+   
+    
 }
 
 button{
@@ -37,30 +42,7 @@ button{
     font-weight: 400;
     text-align: center;
 }
-.calcContainer{
-    position : relative;
-    /* height:90%; */
-    width:30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:rgba(255,255,255,.9);
-    top: -40rem;
-    left: 70%;
-    font-size: 80%;
-    
-}
-.calc{
-     margin:2rem;
-    text-align: center;
-    padding:2rem;
-    width:40rem;
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);
-    border:var(--border);
-    background: #fff;
-    height: 90%;
-}
+
 h3{
     padding-bottom:1rem;
     font-size: .9rem;
@@ -68,17 +50,47 @@ h3{
     text-transform: uppercase;
 }
 
-.calcBox{
-     margin:.4rem 0;
-    width: 100%;
-    font-size: 1rem;
-    color:var(--black);
-    text-transform: none;
-    border:var(--border);
-    padding:0.5rem 1rem;
+.calcContainer{
+    margin-left: 60px;
+   
+    text-align: center;
+    padding:2rem;
+    width:40rem;
     border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
     
+    height: 100%;
+    background:rgba(255,255,255,.9);
+   
+   
 }
+
+
+
+
+.calcBox{
+    margin:.4rem 0;
+   width: 60%;
+   font-size: 1rem;
+   color:var(--black);
+   text-transform: none;
+   border:var(--border);
+   padding:0.5rem 1rem;
+   border-radius: .5rem;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -86,26 +98,21 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.financeCont{
+
+@media (max-width:450px){
+   
+    .Fcontainer{
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    .calcContainer{
+        margin-left: 0;
+    }
     
-    width: 70%;
-    font-size: 100% !important;
-    padding: 0 3rem;;
-}
-
-h1{
-    padding-bottom:1rem;
-    font-size: 2.5rem;
-    color:var(--black);
-    text-transform: uppercase;
-}
-
-strong{
-    font-weight: 600;
-    color:var(--black);
-    margin: 10rem;
-}
-label{
-    font-weight: 600;
-    color:var(--black);
+    .Fheader{
+        padding-left: 0;
+    }
+    .Fcontainer{
+        padding-left: 0;
+    }
+    
 }
