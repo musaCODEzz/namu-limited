@@ -26,28 +26,18 @@ html{
     scroll-behavior: smooth;
 }
 section{
-    padding:2rem 9%;
+    padding:10rem 9%;
 }
 
-.heading{
-    padding-bottom: 2rem;
-    text-align: center;
-    font-size: 4.5rem;
-    color:var(--black);
-}
 
 
 /* Styling the car images */
 img{
-    height: 15rem;
+    height: 25rem;
 }
 
 .box-content{
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 2rem;
-    padding: 2rem 0; */
-
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:1.5rem;
@@ -65,8 +55,67 @@ img{
 .box:hover img{
     transform: scale(.9);
 }
+
+.price{
+    font-size: 2.5rem;
+    color:var(--black);
+}
 h3{
     text-transform: uppercase;
     font-size: 2.2rem;
     color:var(--black);
+}
+.btn{
+    display: inline-block;
+    padding: .8rem 2rem;
+    border-radius: .5rem;
+    background-color: var(--yellow);
+    color:var(--black);
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    
+}
+
+
+.mileage, .condition{
+    font-size: 1.5rem;
+    color:var(--black);
+}
+
+
+
+
+
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left:0; right:0;
+    padding:3rem 9%;
+    z-index: 1000;
+    background: #fff;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color:var(--black);
+    font-weight: bold;
+}
+
+.header .logo span{
+    color:var(--yellow);
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.7rem;
+    color:var(--black);
+}
+
+.header .navbar a:hover{
+    color:var(--yellow);
 }
