@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+    <link rel="stylesheet" href="/namu-limited/css/product.css">
+    <!-- font awesome cdn link  -->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+        <img id="featured" src="/namu-limited/image/volvo.png" alt="car">
+        <div class="slide-wrapper">
+            <i class="fas fa-chevron-circle-left" id="slide-left"></i>
+            <div class="slider">
+                <img class="thumbnail active" src="/namu-limited/image/volvo.png" alt="car">
+                <img class="thumbnail" src="/namu-limited/image/bmw1.png" alt="car">
+                <img class="thumbnail" src="/namu-limited/image/gt1.png" alt="car">
+                <img class="thumbnail" src="/namu-limited/image/car-2.png" alt="car">
+                <img class="thumbnail" src="/namu-limited/image/car-3.png" alt="car">
+                <img class="thumbnail" src="/namu-limited/image/car-4.png" alt="car">
+                <img class="thumbnail" src="/namu-limited/image/car-5.png" alt="car">
+         
+            </div>
+            <i class="fas fa-chevron-circle-right" id="slide-right"></i>
+        </div>
+
+
+        
+
+
+        <script type="text/javascript">
+          let thumbnails = document.getElementsByClassName('thumbnail');  
+          let activeImages = document.getElementsByClassName('active');
+
+            for (var i=0; i < thumbnails.length; i++){
+                thumbnails[i].addEventListener('mouseover', function(){
+                    console.log(activeImages);
+    
+                    if (activeImages.length > 0){
+                        activeImages[0].classList.remove('active');
+                    }
+    
+                    this.classList.add('active');
+                    document.getElementById('featured').src = this.src;
+                })
+            }
+
+
+            const slideLeft = document.getElementById('slide-left');
+            const slideRight = document.getElementById('slide-right');
+            
+            slideLeft.addEventListener('click', function(){
+                document.querySelector('.slider').scrollLeft -= 200;
+            });
+            slideRight.addEventListener('click', function(){
+                
+                document.querySelector('.slider').scrollLeft += 200;
+            });
+
+
+        </script>
+</body>
+</html>
