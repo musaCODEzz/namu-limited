@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --yellow:#f9d806;
+    --light-yellow:#ffee80;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:.1rem solid rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 80%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+.container{
+    padding:1rem 4%;;
+}
+.imagesDivStyle{
+    width:610px;
+    border: 1px gray solid;
+    padding: 5px;
+    margin-left: 120px;
+    margin-bottom: 20px;
+}
+
+.imgs{
+    height: 80px;
+    width:100px;
+    border: 1px black dashed;
+    margin: 5px;
+}
+label{
+    display: inline-block;
+    width: 120px;
+}
+
+input,
+textarea,
+select{
+    width:600px;
+    border: gray 1px solid;
+    resize: none;
+    padding: 8px;
+}
+select{
+    width: 600px;
+}
+
+textarea{
+    height: 100px;
+}
+
+.pointers{
+    border: 1px darkslateblue dashed;
+}
+
+#pdlab{
+    height: 100px;
+    vertical-align: top;
+}
+
+#addprodbtn, #selimgsbtn{
+    float: right;
+    margin-left: 10px;
+}
+#controldiv{
+    width: 740px;
+}
+
+#loadlab{
+    width: 200px;
+}
+
+.btn{
+    
+    margin-top: 1rem;
+    padding: 4px ;
+    background:var(--light-yellow);
+    color:var(--black);
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    text-align: center;
+}

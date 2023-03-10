@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/namu-limited/css/admin.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div class="container">
+        <label>Product Name </label><input type="text" id="nameinp" placeholder="Enter Product Name"><br><br>
+        <label>Product Price </label><input type="number" id="priceinp" placeholder="Enter Product Price"><br><br>
+        <label>Stock (Quantity) </label><input type="number" id="stockinp" placeholder="Enter Stock"><br><br>
+        <label>Category</label>
+        <select id="catinp">
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes Benz">Mercedes Benz</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Nissan">Nissan</option>
+        </select><br><br>
+        <label>Mileage </label><input type="text"  id="p1inp" placeholder="Enter Mileage"  class="pointers" value="Mileage: "><br><br>
+        <label>Color </label><input type="text"  id="p2inp" placeholder="Enter Color" class="pointers" value="Color: "><br><br>
+        <label>Transmission </label><input type="text"  id="p3inp" placeholder="Enter Type of Transmission" class="pointers" value="Transmission Type: "><br><br>
+        <label>Engine </label><input type="text"  id="p4inp" placeholder="Enter Engine Size" class="pointers" value="Engine Size: "><br><br>
+    
+        <label id="pdlab">Product Description </label><textarea id="desarea"  placeholder="Enter Product Description"></textarea><br><br>
+    
+        <div id="imagesDiv"></div>
+    
+        <div id="controldiv">
+            <label></label><label id="loadlab">Upload 1 of 3</label>
+            <button id="addprodbtn" class="btn">Add Product</button>
+            <button id="selimgsbtn" class="btn">Select Images</button>
+        </div>
+    
+        <script type="module" src="/namu-limited/js/admin.js"></script>
+        <!-- <script type="module" src="config.js"></script> -->
+    </div>
+   
+</body>
+</html>
