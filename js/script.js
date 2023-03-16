@@ -138,3 +138,10 @@ var swiper = new Swiper(".review-slider", {
 
 
 
+
+
+
+const newCars = document.getElementById('new-cars');
+newCars.onclick = () => {
+  window.location.href = 'carproducts.html';
+}

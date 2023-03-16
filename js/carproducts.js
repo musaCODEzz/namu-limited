@@ -59,7 +59,7 @@ function AddAllProducts(){
 function AddAProduct(product, index){
     let html =
     `
-        <<img src="`+product. LinksOfImagesArray[0]+`" class="thumb mt-2" id="thumb-`+ index + `">
+        <img src="`+product. LinksOfImagesArray[0]+`" class="thumb mt-2" id="thumb-`+ index + `">
         <p class="title" id="title-`+ index + `">`+ getShortTitle(product.ProductTitle) +`</p>
         `+
         GetUl(product.Points)

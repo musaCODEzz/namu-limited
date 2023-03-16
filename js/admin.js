@@ -202,4 +202,29 @@ const realdb = getDatabase(app);
 
         alert("Product Uploaded Successfully");
         RestoreBack();
+        
     }
+
+
+
+    //reset after upload
+    function ResetAll(){
+        name.value = "";
+        category.value = "";
+        description.value = "";
+        price.value = "";
+        stock.value = "";
+        p1.value = "";
+        p2.value = "";
+        p3.value = "";
+        p4.value = "";
+        imgdiv.innerHTML = "";
+        imgdiv.classList.remove('imagesDivStyle');
+        proglab.innerHTML = "";
+        Files = [];
+        FileReaders = [];
+        ImageLinksArray = [];
+    }
+
+    //get all products
+    
